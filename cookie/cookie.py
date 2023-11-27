@@ -8,7 +8,7 @@ class CookieScanner:
     def scan_cookies(self):
         try:
             # Send a GET request to the specified URL
-            response = requests.get(self.url)
+            response = requests.get(self.url, verify=False)
 
             # Check if the request was successful (status code 200)
             if response.status_code == 200:
